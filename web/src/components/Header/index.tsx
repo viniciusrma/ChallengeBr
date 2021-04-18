@@ -4,7 +4,7 @@ import { StyledHeader } from './styles';
 
 const Header: React.FC = () => {
   return (
-    <StyledHeader>
+    <StyledHeader theme="dark">
       <div className="logo">
         <h1>ChallengeBr</h1>
       </div>

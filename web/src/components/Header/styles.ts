@@ -1,16 +1,18 @@
 import styled from 'styled-components';
+import { Menu } from 'antd';
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled(Menu)`
   display: flex;
   align-items: center;
   height: 10vh;
   padding: 0px 20px;
-  background: pink;
+  
 
   .logo {
     padding: 10px;
     h1 {
       margin: 0px;
+      color: #fff;
     }
   }
 
@@ -22,9 +24,9 @@ export const StyledHeader = styled.header`
 
   .link {
     text-decoration: none;
-    color: #000;
+    color: #fff;
 
-    &:hover{
+    &:hover {
       color: blue;
     }
   }
