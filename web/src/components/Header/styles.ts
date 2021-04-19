@@ -16,25 +16,6 @@ export const StyledHeader = styled.div`
     }
   }
 
-  .navigation {
-    width: auto;
-    padding: 0px 20px;
-    justify-content: space-between;
-  }
-
-  .link {
-    text-decoration: none;
-    color: #fff;
-
-    &:hover {
-      color: blue;
-    }
-  }
-
-  #link_home {
-    margin-right: 10px;
-  }
-
   .ant-input-group-addon{
     display: none;
   }

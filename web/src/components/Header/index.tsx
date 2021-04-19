@@ -14,14 +14,6 @@ const Header: React.FC = () => {
       <div className="logo">
         <h1>ChallengeBr</h1>
       </div>
-      {/* <div className="navigation">
-        <Link id="link_home" className="link" to="/">
-          Home
-        </Link>
-        <Link id="link_companies" className="link" to="/companies">
-          Companies
-        </Link>
-      </div> */}
       <Search
         placeholder="Buscar empresa"
         onSearch={onSearch}

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Companies from './pages/Companies';
+import RegisterForm from './components/RegisterForm';
+import Main from './pages/Main';
 
 const Routes: React.FC = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/companies" exact component={Companies} />
+      <Route path="/" exact component={Main} />
+      <Route path="/register_company" exact component={RegisterForm} />
     </Switch>
   );
 };

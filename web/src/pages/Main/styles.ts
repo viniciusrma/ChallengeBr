@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Layout } from 'antd';
+import { Drawer, Layout } from 'antd';
 
 export const StyledLayout = styled(Layout)`
   padding: 5vh 10vw;
@@ -12,5 +12,15 @@ export const StyledLayout = styled(Layout)`
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     }
   }
-  
+`;
+
+export const StyledDrawer = styled(Drawer)`
+  .ant-drawer-footer {
+    text-align: right;
+  }
+
+  button {
+    margin-right: 10px;
+    
+  }
 `;
