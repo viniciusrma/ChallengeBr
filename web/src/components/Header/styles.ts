@@ -4,9 +4,9 @@ import { Menu } from 'antd';
 export const StyledHeader = styled(Menu)`
   display: flex;
   align-items: center;
+  justify-content: space-between ;
   height: 10vh;
   padding: 0px 20px;
-  
 
   .logo {
     padding: 10px;
@@ -33,5 +33,25 @@ export const StyledHeader = styled(Menu)`
 
   #link_home {
     margin-right: 10px;
+  }
+
+  .user {
+    display: flex;
+    align-self: center;
+
+  }
+
+  span.anticon.anticon-user {
+    margin-right: 10px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  h4 {
+    color: #fff;
+    margin: auto;
   }
 `;
