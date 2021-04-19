@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { Menu } from 'antd';
 
-export const StyledHeader = styled(Menu)`
+export const StyledHeader = styled.div`
   display: flex;
+  background-color: black;
+  padding: 0 24px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-between ;
   height: 10vh;
-  padding: 0px 20px;
 
   .logo {
     padding: 10px;
@@ -35,6 +35,10 @@ export const StyledHeader = styled(Menu)`
     margin-right: 10px;
   }
 
+  .ant-input-group-addon{
+    display: none;
+  }
+
   .user {
     display: flex;
     align-self: center;
@@ -48,6 +52,7 @@ export const StyledHeader = styled(Menu)`
   svg {
     width: 20px;
     height: 20px;
+    color: #fff;
   }
 
   h4 {
