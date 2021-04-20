@@ -1,5 +1,5 @@
 declare interface ICompanies {
-  id: number;
+  id: string;
   name: string;
   cnpj: number;
   demand: number;
@@ -19,4 +19,8 @@ declare interface INewCompany {
 
 declare interface Props {
   toggleVisibility(): void;
+}
+
+declare interface IParamsProps {
+  id: string;
 }
