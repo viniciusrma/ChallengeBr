@@ -9,6 +9,7 @@ import {
   Input,
   List,
   message,
+  Modal,
   PageHeader,
   Row,
   Select,
@@ -21,6 +22,7 @@ import api from '../../services/api';
 import {
   DeleteOutlined,
   EditOutlined,
+  ExclamationCircleOutlined,
   EyeOutlined,
   PlusOutlined,
 } from '@ant-design/icons';
@@ -39,6 +41,7 @@ const Main: React.FC = () => {
   const history = useHistory();
 
   const { Option } = Select;
+  const { confirm } = Modal;
 
   useEffect(() => {
     api
@@ -98,16 +101,29 @@ const Main: React.FC = () => {
   }, [name, cnpj, demand, billing, about, currentCompany, handleDrawerUpdate]);
 
   const handleDelete = useCallback(
-    async (id: string) => {
-      await api.delete(`/companies/${id}`);
-
-      const remainingCompanies = companies.filter(
-        (company) => company.id !== id,
-      );
-      setCompanies(remainingCompanies);
-      message.success('Cliente removido com sucesso.', 3);
+    (id: string) => {
+      confirm({
+        title: 'Tem certeza que deseja remover este item?',
+        icon: <ExclamationCircleOutlined />,
+        content: 'Esta ação não poderá ser desfeita.',
+        okText: 'Sim, deletar',
+        okType: 'danger',
+        cancelText: 'Não',
+        async onOk() {
+          await api.delete(`/companies/${id}`);
+          console.log('Item Deletado');
+          message.success('Cliente removido com sucesso.', 3);
+          const remainingCompanies = companies.filter(
+            (company) => company.id !== id,
+          );
+          setCompanies(remainingCompanies);
+        },
+        onCancel() {
+          console.log('Cancelado');
+        },
+      });
     },
-    [companies],
+    [companies, confirm],
   );
 
   function showRecordOnDrawer(company: ICompanies) {

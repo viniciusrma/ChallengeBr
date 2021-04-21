@@ -24,3 +24,17 @@ declare interface Props {
 declare interface IParamsProps {
   id: string;
 }
+
+declare interface IModalConfirmDelete {
+  title: string;
+  message: string;
+  onOk: () => any;
+}
+
+declare interface IRouteContext {
+  getRoutes: () => Promise<void>;
+  getRouteById: (id: string) => Promise<ICompanies | any>;
+  createRoute: (route: ICompanies) => Promise<{ error: any }>;
+  updateRoute: (route: ICompanies) => Promise<{ error: any }>;
+  deleteRoute: (id: string) => Promise<void>;
+}
