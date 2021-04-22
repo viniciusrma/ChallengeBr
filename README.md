@@ -130,4 +130,3 @@ $ yarn start
 <h4  align="center">
 Made by <a  href="https://www.linkedin.com/in/viniciusrma/"  target="_blank">Vinícius Morais</a>
 </h4>
-!
