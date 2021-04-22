@@ -18,6 +18,12 @@ export const getCompany = async (request: Request, response: Response) => {
   return response.json(company);
 };
 
+export const getCompanyByTitle = async (request: Request, response: Response) => {
+  const { name } = request.params;
+  const company = await getRepository(Companies).findOne(name);
+  return response.json(company);
+};
+
 export const updateCompany = async (request: Request, response: Response) => {
   const { id } = request.params;
   const company = await getRepository(Companies).update(id, request.body);
