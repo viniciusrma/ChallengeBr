@@ -10,8 +10,6 @@
 
 - [How to use](#how-to-use)
 
-- [How to contribute](#hot-to-contribute)
-
 <a  id="about"></a>
 
 ## 📑 About
